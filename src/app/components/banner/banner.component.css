@@ -1,0 +1,15 @@
+img{
+	width: 100%;
+	height: 600px;
+}
+
+/* Para quitar todos los padding de la fila */
+.row > *{
+	padding-right: 0;
+}
+
+.ban{
+	position: relative;
+	left: 50%;
+	top:2%;
+}

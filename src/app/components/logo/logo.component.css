@@ -1,0 +1,57 @@
+.container{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes{
+	margin-right: 0.5em; 
+	float: right;
+	
+}
+
+.redes a{
+	margin-right: 7px;
+	text-align-last: right;
+
+}
+
+#logoAP{
+	width: 150px;
+	opacity: 0.4;
+	mix-blend-mode: exclusion;
+}
+
+img{
+	width: 50px;
+}
+
+.row > *{
+	place-self: center;
+	
+}
+
+.btn{
+	border-width: medium;
+	margin-left: 20px;
+}
+
+button{
+	margin-right: 20px;
+}
+
+li a{
+	color: black;
+	text-decoration: none;
+	margin: 10px;
+}
+
+li a:hover{
+	color: gray;
+}
+
+.row > *{
+	width: 50%;
+}
+
+

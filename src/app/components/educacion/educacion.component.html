@@ -14,17 +14,19 @@
 							<th>Institución</th>
 							<th>Carrera</th>
 							<th>Título</th>
-							<th>Año</th>
+							<th>Inicio</th>
+							<th>Fín</th>
 							<th></th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr *ngFor="let Educacion of educacion">
-							<td>{{Educacion.nombreEdu}}</td>
-							<td>{{Educacion.descripcionEdu}}</td>
-							<td></td>
-							<td></td>
+							<td>{{Educacion.nombre}}</td>
+							<td>{{Educacion.carrera}}</td>
+							<td>{{Educacion.titulo}}</td>
+							<td>{{Educacion.inicio}}</td>
+							<td>{{Educacion.fin}}</td>
 							<td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">Editar</button></td>
 							<td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)">Borrar</button></td>
 						</tr>

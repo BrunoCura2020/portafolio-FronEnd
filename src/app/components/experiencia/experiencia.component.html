@@ -13,18 +13,20 @@
 						<tr>
 							<th>Lugar</th>
 							<th>Puesto</th>
-							<th>Periodo</th>
 							<th>Descripción</th>
+							<th>Inicio</th>
+							<th>Fín</th>
 							<th></th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr *ngFor="let Experiencia of expe">
-							<td>{{Experiencia.nombreE}}</td>
-							<td>{{Experiencia.descripcionE}}</td>
+							<td>{{Experiencia.lugar}}</td>
 							<td>{{Experiencia.puesto}}</td>
-							<td>{{Experiencia.periodo}}</td>
+							<td>{{Experiencia.descripcion}}</td>
+							<td>{{Experiencia.inicio}}</td>
+							<td>{{Experiencia.fin}}</td>
 							<td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">Editar</button></td>
 							<td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)">Borrar</button></td>
 						</tr>

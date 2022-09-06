@@ -1,14 +1,17 @@
 export class Experiencia {
     id?: number;
-    nombreE: string;
+    lugar: string;
     puesto: string;
-    periodo: string;
-    descripcionE: string;
+    descripcion: string;
+    inicio: string;
+    fin: string;
 
-    constructor(nombreE: string, descripcionE: string, puesto: string, periodo: string){
-        this.nombreE = nombreE;
-        this.descripcionE = descripcionE;
+
+    constructor(lugar: string, puesto: string, descripcion: string, inicio: string, fin: string){
+        this.lugar = lugar;
         this.puesto = puesto;
-        this.periodo = periodo;
+        this.descripcion = descripcion;
+        this.inicio = inicio;
+        this.fin = fin;
     }
 }

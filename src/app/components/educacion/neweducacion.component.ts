@@ -9,15 +9,18 @@ import { EducacionService } from 'src/app/service/educacion.service';
   styleUrls: ['./neweducacion.component.css']
 })
 export class NeweducacionComponent implements OnInit {
-  nombreEdu: string;
-  descripcionEdu: string;
+  nombre: string;
+  carrera: string;
+  titulo: string;
+  inicio: string;
+  fin: string;
 
   constructor(private sEducacion: EducacionService, private router: Router) { }
 
   ngOnInit():void{}
 
   onCreate(): void {
-    const educacion = new Educacion(this.nombreEdu, this.descripcionEdu);
+    const educacion = new Educacion(this.nombre, this.carrera, this.titulo, this.inicio, this.fin);
     this.sEducacion.save(educacion).subscribe(
       data =>{
         alert("Experiencia añadida");

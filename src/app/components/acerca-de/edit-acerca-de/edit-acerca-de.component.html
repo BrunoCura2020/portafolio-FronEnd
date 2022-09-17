@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="acercaDe.descripcion"></textarea>
+                </div>
+
+                <button class="btn btn-primary">Editar información</button>
+            </form>
+        </div>
+    </div>
+</div>

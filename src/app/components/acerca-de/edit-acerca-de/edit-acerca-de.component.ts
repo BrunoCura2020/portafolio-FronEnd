@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Educacion } from 'src/app/model/educacion';
-import { EducacionService } from 'src/app/service/educacion.service';
+import { AcercaDe } from 'src/app/model/acerca-de';
+import { AcercaDeService } from 'src/app/service/acerca-de.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-editeducacion',
-  templateUrl: './editeducacion.component.html',
-  styleUrls: ['./editeducacion.component.css']
+  selector: 'app-edit-acerca-de',
+  templateUrl: './edit-acerca-de.component.html',
+  styleUrls: ['./edit-acerca-de.component.css']
 })
-export class EditeducacionComponent implements OnInit {
-  educacion: Educacion = null;
+export class EditAcercaDeComponent implements OnInit {
 
-  constructor(private Seducacion: EducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  acercaDe: AcercaDe = null;
+  constructor(private sAcercaDe: AcercaDeService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.Seducacion.detail(id).subscribe(
+    this.sAcercaDe.detail(id).subscribe(
       data => {
-        this.educacion = data;
+        this.acercaDe = data;
       }, err => {
         this.errorModal();
         this.router.navigate(['']);
@@ -28,7 +28,7 @@ export class EditeducacionComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.Seducacion.update(id, this.educacion).subscribe(
+    this.sAcercaDe.update(id, this.acercaDe).subscribe(
       data => {
         this.exitoModal();
         this.router.navigate(['']);
@@ -37,8 +37,8 @@ export class EditeducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
-  }
 
+  }
   errorModal(){
     Swal.fire({
     icon: 'error',
@@ -57,4 +57,6 @@ export class EditeducacionComponent implements OnInit {
     });
   }
 }
+
+
 

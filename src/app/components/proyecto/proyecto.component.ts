@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-proyecto',
@@ -33,12 +34,30 @@ export class ProyectoComponent implements OnInit {
     if(id != undefined){
       this.sProyecto.delete(id).subscribe(
         data => {
+          this.exitoModal();
           this.cargarProyecto();
         }, err => {
-          alert("No se pudo borrar el proyecto");
+          this.errorModal();
         }
       );
     }
   }
 
+  errorModal(){
+    Swal.fire({
+    icon: 'error',
+    title: 'Error al querer eliminarr.',
+    timer: 1800
+    });
+  }
+
+  exitoModal(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Proyecto eliminado',
+      showConfirmButton: false,
+      timer: 1800
+    });
+  }
 }

@@ -1,6 +1,11 @@
+<!-- <div>
+    <input (change)="capturarFile($event)" type="file">
+</div>
+ -->
 <div class="container">
     <div class="row">
         <div>
+            <h2>Agregar proyecto</h2>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombre">Nombre del proyecto</label>
@@ -20,10 +25,15 @@
                 
                 <div class="form-group">
                     <label for="imagen">imagen</label>
-                    <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="imagen" required>
+                    <input (change)="capturarFile($event)" type="file" class="form-control" id="imagen" name="imagen" [(ngModel)]="imagen" required>
+                    <!-- <input (change)="capturarFile($event)" type="file"> -->
                 </div>
 
-                <button class="btn btn-primary"> Agregar educación</button>
+                <div *ngIf="previsualizacion">
+                    <img width="100px" [src]="previsualizacion" alt="">
+                </div>
+
+                <button class="btn btn-primary"> Agregar proyecto</button>
             </form>
         </div>
     </div>

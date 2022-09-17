@@ -1,5 +1,5 @@
 <div class="row">
-	<h1>Experiencia laboral</h1>
+	<h2>Experiencia laboral</h2>
 
 	<div class="col-lg-3">
 		<button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">Nueva experiencia</button>
@@ -16,8 +16,8 @@
 							<th>Descripción</th>
 							<th>Inicio</th>
 							<th>Fín</th>
-							<th></th>
-							<th></th>
+							<th *ngIf="isLogged"></th>
+							<th *ngIf="isLogged"></th>
 						</tr>
 					</thead>
 					<tbody>

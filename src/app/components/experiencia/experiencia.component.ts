@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-experiencia',
@@ -32,12 +33,31 @@ export class ExperienciaComponent implements OnInit {
     if(id != undefined){
       this.sExperiencia.delete(id).subscribe(
         data => {
+          this.errorModal();
           this.cargarExperiencia();
         }, err => {
-          alert("No se pudo borrar la experiencia");
+          this.errorModal();
         }
       );
     }
+  }
+
+  errorModal(){
+    Swal.fire({
+    icon: 'error',
+    title: 'Error al querer eliminarr.',
+    timer: 1800
+    });
+  }
+
+  exitoModal(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Experiencia eliminada',
+      showConfirmButton: false,
+      timer: 1800
+    });
   }
 }
 

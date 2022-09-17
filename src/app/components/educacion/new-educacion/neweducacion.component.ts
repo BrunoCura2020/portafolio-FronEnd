@@ -45,7 +45,7 @@ export class NeweducacionComponent implements OnInit {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Información añadida',
+      title: 'Educación añadida',
       showConfirmButton: false,
       timer: 1800
     });

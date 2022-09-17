@@ -4,6 +4,7 @@ import { Persona } from 'src/app/model/persona.model';
 import { AcercaDeService } from 'src/app/service/acerca-de.service';
 import { PersonaService } from 'src/app/service/persona.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-acerca-de',
@@ -46,12 +47,32 @@ export class AcercaDeComponent implements OnInit {
     if(id != undefined){
       this.sAcercaDe.delete(id).subscribe(
         data => {
+          this.exitoModal();
           this.cargarAcercaDe();
         }, err =>{
-          alert("No se pudo eliminar");
+          this.errorModal();
         }
       )
     }
+  }
+
+  
+  errorModal(){
+    Swal.fire({
+    icon: 'error',
+    title: 'Error al querer eliminarr.',
+    timer: 1800
+    });
+  }
+
+  exitoModal(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Información eliminada',
+      showConfirmButton: false,
+      timer: 1800
+    });
   }
 }
 

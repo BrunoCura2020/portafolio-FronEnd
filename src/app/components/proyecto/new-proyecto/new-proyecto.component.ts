@@ -49,7 +49,7 @@ export class NewProyectoComponent implements OnInit {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Infomación añadida',
+      title: 'Proyecto añadido',
       showConfirmButton: false,
       timer: 1800
     });

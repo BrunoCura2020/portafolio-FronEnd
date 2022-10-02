@@ -8,8 +8,8 @@ import { AcercaDe } from '../model/acerca-de';
   providedIn: 'root'
 })
 export class AcercaDeService {
-
-  URL = 'http://localhost:8080/acercaDe/';
+  URL = 'http://localhost:8080/acercaDe/'; 
+  // URL = 'https://bkd-portafolio.herokuapp.com/acercaDe/';
 
   constructor(private httpClient:HttpClient) { }
 

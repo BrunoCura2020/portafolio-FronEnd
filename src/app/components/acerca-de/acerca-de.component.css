@@ -6,6 +6,10 @@ div{
 	background-color: #a1b5cb;
 	text-align: center;
 }
+
+thead, tbody, tfoot, tr, td, #fun{
+	display: -webkit-inline-box;
+}
 /*Foto de perfil*/
 @media(min-width: 576px){
 	#fotoperfil{

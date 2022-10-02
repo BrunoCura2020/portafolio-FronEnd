@@ -36,7 +36,7 @@ export class NeweducacionComponent implements OnInit {
   errorModal(){
     Swal.fire({
     icon: 'error',
-    title: 'Error al querer modificar.',
+    title: 'Error al querer añadir.',
     timer: 1800
     });
   }

@@ -54,4 +54,22 @@ li a:hover{
 	width: 50%;
 }
 
+@media(max-width: 363px) {
+	.btn{
+		font-size: 11px;
+	}
+}
+
+@media(max-width: 323px) {
+	.btn{
+		font-size: 11px;
+	}
+}
+
+@media(max-width: 322px){
+	.btn{
+		font-size: 10px;
+	}
+} 
+
 

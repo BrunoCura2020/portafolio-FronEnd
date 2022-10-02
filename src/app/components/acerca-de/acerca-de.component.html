@@ -12,8 +12,8 @@
 		<span>
 			<ul *ngFor="let AcercaDe of acercaDe">
 				<li>{{AcercaDe.descripcion}}</li>
-				<td *ngIf="isLogged"><button class="btn btn-light me-2" routerLink="editAcer/{{AcercaDe.id}}">Editar</button></td>
-				<td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(AcercaDe.id)">Borrar</button></td>
+				<td *ngIf="isLogged"><button class="btn btn-light me-2 fun" routerLink="editAcer/{{AcercaDe.id}}">Editar</button></td>
+				<td *ngIf="isLogged"><button class="btn btn-danger fun" (click)="delete(AcercaDe.id)">Borrar</button></td>
 			</ul>
 		</span>
 	</div>

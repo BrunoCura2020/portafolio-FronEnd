@@ -8,6 +8,7 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { PersonaComponent } from './components/persona/persona.component';
 import { EditProyectoComponent } from './components/proyecto/edit-proyecto/edit-proyecto.component';
 import { NewProyectoComponent } from './components/proyecto/new-proyecto/new-proyecto.component';
 
@@ -22,8 +23,6 @@ const routes: Routes = [
 	{path:'editpro/:id', component: EditProyectoComponent},
 	{path:'nuevoAcer', component: NewAcercaDeComponent},
 	{path:'editAcer/:id', component: EditAcercaDeComponent}
-
-
 ];
 
 @NgModule({

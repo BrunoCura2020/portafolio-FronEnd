@@ -21,7 +21,7 @@ export class NewAcercaDeComponent implements OnInit {
     const acercaDe = new AcercaDe(this.descripcion);
     this.sAcercaDe.save(acercaDe).subscribe(
       data =>{
-        this.exitoModal();
+        this.showModal();
         this.router.navigate(['']);
       }, err => {
         this.errorModal();
@@ -33,12 +33,12 @@ export class NewAcercaDeComponent implements OnInit {
   errorModal(){
     Swal.fire({
     icon: 'error',
-    title: 'Error al querer modificar.',
+    title: 'Error al querer añadir.',
     timer: 1800
     });
   }
 
-  exitoModal(){
+  showModal(){
     Swal.fire({
       position: 'center',
       icon: 'success',

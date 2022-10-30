@@ -11,7 +11,7 @@
 			<div *ngFor="let Proyecto of proyecto">
 				<h3>{{Proyecto.nombre}} | {{Proyecto.realizacion}}</h3>
 				<p>{{Proyecto.descripcion}}</p>
-				<p>{{Proyecto.imagen}}</p>
+			
 				<td *ngIf="isLogged"><button class="btn btn-light me-2" routerLink="/editpro/{{Proyecto.id}}">Editar</button></td>
 				<td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyecto.id)">Borrar</button></td>
 			</div>
